@@ -6,6 +6,7 @@
 
 <metal:main
     define-macro="nav_main"
+<<<<<<< HEAD
     tal:define="enable_parent_clickable view/enable_parent_clickable;
                 enable_images view/enableImages;
                 image_size view/imgSize;
@@ -26,6 +27,7 @@
                   class_selected  python:' selected active' if item_url in context.absolute_url() else None;
                   class_state     string: state-${node/normalized_review_state};
                   class_clickable python:' noClick' if not enable_parent_clickable and children else None;"
+      tal:attributes="id string:l${level}-${node/id};"
       class="plain ${class_position}${class_dropdown}${class_selected}">
     <a class="clearfix${class_state}${class_has_dd}${class_clickable}"
        title="${node/Description}"
@@ -45,7 +47,6 @@
     </ul>
 
   </li>
-
 </tal:loop>
 </metal:main>
 </tal:master>
