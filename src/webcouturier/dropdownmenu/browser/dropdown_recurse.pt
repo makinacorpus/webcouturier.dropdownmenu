@@ -26,7 +26,7 @@
                   class_selected  python:' selected active' if item_url in context.absolute_url() else None;
                   class_state     string: state-${node/normalized_review_state};
                   class_clickable python:' noClick' if not enable_parent_clickable and children else None;"
-      class="${class_position}${class_dropdown}${class_selected}">
+      class="plain ${class_position}${class_dropdown}${class_selected}">
     <a class="clearfix${class_state}${class_has_dd}${class_clickable}"
        title="${node/Description}"
        href="${python:use_remote_url and item_remote_url or item_url}">
@@ -39,7 +39,6 @@
             tal:condition="python:enable_desc and node['Description']">${node/Description}</span>
       <span tal:condition="children" class="opener"><span class="caret"></span></span>
     </a>
-
     <ul tal:condition="python: len(children) > 0 and show_children"
         class="${python:'submenu dropdown-menu navTree navTreeLevel'+str(level)}">
       <span tal:replace="structure python:view.recurse(children=children, level=level+1, bottomLevel=bottomLevel)" />
