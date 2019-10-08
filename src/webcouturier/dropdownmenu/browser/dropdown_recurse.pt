@@ -6,7 +6,6 @@
 
 <metal:main
     define-macro="nav_main"
-<<<<<<< HEAD
     tal:define="enable_parent_clickable view/enable_parent_clickable;
                 enable_images view/enableImages;
                 image_size view/imgSize;
