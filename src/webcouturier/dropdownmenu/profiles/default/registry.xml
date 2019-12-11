@@ -23,7 +23,7 @@
     <value key="resources">
       <element>webcouturier-dropdownmenu</element>
     </value>
-    <value key="depends">jquery</value>
+    <value key="depends">plone</value>
     <value key="enabled">True</value>
     <value key="compile">True</value>
     <value key="csscompilation">++plone++dropdown/dropdownmenu-compiled.css</value>
